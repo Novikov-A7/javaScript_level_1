@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork_2</title>
+    <script>
+        // Задание 1 
+        /*
+        var a = 1, b = 1, c, d;
+        c = ++a; alert(c);          // 2 c = 1 + 1; вывести 2;
+        d = b++; alert(d);          // 1 d = b = 1 ; вывести 1 -> b = 1 + 1;
+        c = (2 + ++a); alert(c);    // 5 с = 2 + (1+2); вывести 5;
+        d = (2 + b++); alert(d);    // 4 d = 2 + 2; вывести 4 -> b = 2 + 1;
+        alert(a);                   // 3 a = 3 (увеличилось в 10 и 12 стр);
+        alert(b);                   // 3 b = 3 (увеличилось в 11 и 13 стр);
+        */
+        //задание 2
+        /*
+        var a = 2;
+        var x = 1 + (a *= 2); // x = 5
+        */
+        // Задание 3
+        /*
+        var a = +prompt("введите любое целое число 'a' ");
+        var b = +prompt("введите любое целое число 'b' ");
+        var result;
+
+        if (a >= 0 && b >= 0) {
+            result = Math.max(a, b) - Math.min(a, b);
+            console.log("Разность чисел " + result);
+        }
+        else if (a < 0 && b < 0) {
+            result = a * b;
+            console.log("Произведение чисел " + result);
+        }
+        else if (Math.min(a, b) < 0 && Math.max(a, b) >= 0) {
+            result = a + b;
+            console.log("Сумма чисел " + result);
+        }
+        else {
+            console.log("Некорректный ввод данных");
+        }
+        */
+        // Задание 4
+        /*
+        var a = +(Math.random() * 14 + 0).toFixed();
+        switch (a) {
+            case 0:
+                alert("0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15");
+                break;
+            case 1:
+                alert("1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15");
+                break;
+            case 2:
+                alert("2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15");
+                break;
+            case 3:
+                alert("3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15");
+                break;
+            case 4:
+                alert(" 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15");
+                break;
+            case 5:
+                alert("5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15");
+                break;
+            case 6:
+                alert("6, 7, 8, 9, 10, 11, 12, 13, 14, 15");
+                break;
+            case 7:
+                alert("7, 8, 9, 10, 11, 12, 13, 14, 15");
+                break;
+            case 8:
+                alert("8, 9, 10, 11, 12, 13, 14, 15");
+                break;
+            case 9:
+                alert("9, 10, 11, 12, 13, 14, 15");
+                break;
+            case 10:
+                alert("10, 11, 12, 13, 14, 15");
+                break;
+            case 11:
+                alert("11, 12, 13, 14, 15");
+                break;
+            case 12:
+                alert("12, 13, 14, 15");
+                break;
+            case 13:
+                alert("13, 14, 15");
+                break;
+            case 14:
+                alert("14, 15");
+                break;
+            case 15:
+                alert("15");
+                break;
+        }
+        */
+
+        // Задание 5
+        /*
+        var a, b, result
+
+        function summ(a, b) {
+            result = a + b;
+            return result;
+        }
+
+        function subtraction(a, b) {
+            result = Math.max(a, b) - Math.min(a, b);
+            return result;
+        }
+
+        function multiplication(a, b) {
+            result = a * b;
+            return result;
+        }
+
+        function divided(a, b) {
+            if(b != 0) {
+                result = a / b;
+                return result;
+            }
+            else
+            alert("На ноль делить нельзя !")
+        }
+        */
+
+        // Задание 6
+
+
+        function summ(a, b) {
+            result = a + b;
+            return result;
+        }
+
+        function subtraction(a, b) {
+            result = Math.max(a, b) - Math.min(a, b);
+            return result;
+        }
+
+        function multiplication(a, b) {
+            result = a * b;
+            return result;
+        }
+
+        function divided(a, b) {
+            if (b != 0) {
+                result = a / b;
+                return result;
+            }
+            else
+                alert("На ноль делить нельзя !")
+        }
+
+        function mathOperation(a, b, operation) {
+            switch (operation) {
+                case "summ":
+                    summ(a, b);
+                    return result;
+                    break;
+                case "subtraction":
+                    subtraction(a, b);
+                    return result;
+                    break;
+                case "multiplication":
+                    multiplication(a, b);
+                    return result;
+                    break;
+                case "divided":
+                    divided(a, b);
+                    return result;
+                    break;
+            }
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
