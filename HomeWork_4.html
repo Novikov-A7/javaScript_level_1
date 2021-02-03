@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var n = +prompt("Введите число от '0' до '999'");
+        crushingNumber(n);
+        var crush = {};
+        console.log(crush);
+
+        function crushingNumber(n) {
+
+
+            crushArr = String(n).split('');// перевел число в массив как строку
+            crushArr.reverse();          // изменил порядок цифр в массиве, теперь код будет работать не зависимо от разрядности введенной цифры )))
+
+            if (n <= 999) {
+                crush.единицы = crushArr[0];
+                crush.десятки = crushArr[1];
+                crush.сотни = crushArr[2];
+                return (crush);
+            }
+            else {
+                console.log("Число больше 999");
+
+            }
+        }
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
