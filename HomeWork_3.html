@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //ЗАДАНИЕ 1
+
+        var a = 0; // число
+        while (a <= 100) {
+            i = 1;// делитель
+            action = 0;
+            while (i <= (a / 2)) { // проверка на составность
+                if (a % i == 0) {
+                    action++;
+                }
+                i++;
+            }
+            if (action == 1) {
+                console.log(a)
+            }
+            a++;
+        }
+
+        // ЗАДАНИЕ 2
+        var goods = [
+            {
+                title: "Товар 1",
+                price: 100,
+                quantity: 3,
+            },
+            {
+                title: "Товар 2",
+                price: 200,
+                quantity: 5,
+            },
+            {
+                title: "Товар 3",
+                price: 300,
+                quantity: 1,
+            },
+        ]
+
+        function countBasketPrice() {
+            var s = 0;
+            for (var i = 0; i < goods.length; i++) {
+                s += +goods[i].quantity * +goods[i].price;
+            }
+            console.log(s);
+        }
+        countBasketPrice()
+
+
+        // ЗАДАНИЕ 4
+
+        for (var i = 0; i <= 9; console.log(i++));
+
+        //ЗАДАНИЕ 5 "Елочка"
+
+        var a = "x";
+        for (var i = 1; i <= 20; i++) {
+            console.log(a);
+            a = (a + "x");
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
