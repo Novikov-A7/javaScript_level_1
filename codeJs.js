@@ -1,29 +1,46 @@
-var table = document.createElement("table");
-var tr, td, i;
-var letter = ["", "A", "B", "C", "D", "E", "F", "G", "H", ""]
-var number = ["", "1", "2", "3", "4", "5", "6", "7", "8", ""]
 
-for (i = 1; i <= 10; i++) {
-    tr = document.createElement("tr");
-    td = document.createElement("td")
-    tr.appendChild(td);
-    table.append(tr);
-
-    td.innerText = (number[10 - i]);
+function chess() {
+    var table = document.createElement("table"), tr, td, i, a,
+        letter = ["", "A", "B", "C", "D", "E", "F", "G", "H", ""],
+        blackFigs1 = ['8', '&#9820;', '&#9822;', '&#9821;', '&#9819;', '&#9818;', '&#9821;', '&#9822;', '&#9820;', '8'],
+        whiteFigs1 = ['1', '&#9814;', '&#9816;', '&#9815;', '&#9813;', '&#9812;', '&#9815;', '&#9816;', '&#9814;', '1'],
+        blackFigs2 = ['7', '&#9823;', '&#9823;', '&#9823;', '&#9823;', '&#9823;', '&#9823;', '&#9823;', '&#9823;', '7'],
+        whiteFigs2 = ['2', '&#9817;', '&#9817;', '&#9817;', '&#9817;', '&#9817;', '&#9817;', '&#9817;', '&#9817;', '2'];
 
 
-    for (var j = 1; j <= 10; j++) {
-        td = document.createElement("td");
-        td.setAttribute("style", "border: 1px solid black; padding: 50px;");
-        tr.append(td);
-        if (i == 10) {
-            td.insertAdjacentHTML("afterBegin", letter[j - 1]);
+    for (i = 0, a = 9; i <= 9, a >= 0; i++, a--) {
+        tr = table.insertRow(i);
+
+        for (var j = 0; j < 10; j++) {
+            td = tr.insertCell(j);
+
+            switch (i) {
+                case 0:
+                    td.innerText = letter[j];
+                    break;
+                case 1:
+                    td.innerHTML = blackFigs1[j];
+                    break;
+                case 2:
+                    td.innerHTML = blackFigs2[j];
+                    break;
+                case 7:
+                    td.innerHTML = whiteFigs2[j];
+                    break;
+                case 8:
+                    td.innerHTML = whiteFigs1[j];
+                    break;
+                case 9:
+                    td.innerText = letter[j];
+                    break;
+                default:
+                    if (j == 0 || j == 9) {
+                        td.innerHTML = a;
+                    }
+                    break;
+            }
         }
-
-
     }
+    document.body.append(table);
 }
-
-document.querySelector("div").append(table);
-table.setAttribute("style", "border-collapse: collapse;");
-
+chess();
