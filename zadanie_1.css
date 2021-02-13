@@ -1,0 +1,19 @@
+.container {
+    width: 1400px;
+}
+.smoll{
+    display: flex;
+    justify-content: space-between;
+}
+#img_1 {
+    height: 200px;
+}
+#img_2 {
+    height: 200px;
+}
+#img_3 {
+    height: 200px;
+}
+#big{
+    height: 200px;
+}
