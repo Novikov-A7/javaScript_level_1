@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="zadanie_1.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="smoll">
+            <img id="img_1" src="image/small/img_1.jpg" alt="картинка1">
+            <img id="img_2" src="image/small/img_2.jpg" alt="Картинка2">
+            <img id="img_3" src="image/small/img_3.jpg" alt="Картинка3">
+        </div>
+        <div class="big_img">
+            <img id="big" src="" onerror=ImageError()>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    document.querySelectorAll("img").onclick = "f(this.id)";
+
+    function f(id) {
+
+        var small = document.getElementById(id);
+        var pull = small.src.replace('small', 'big');
+        console.log(pull);
+
+        var big = document.getElementById("big");
+        big.src = pull;
+    }
+    function ImageError() {
+        alert("Для этого изображения нет большой картинки");
+    }
+</script>
+
+</html>
